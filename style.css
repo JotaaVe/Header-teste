@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body{
+    background-color: rgb(189, 189, 189);
+    display: flex;
+    justify-content: center;
+    
+}
+
+*{
+    color: white;
+    
+}
+
+ul{
+    display: flex;
+}
+
+.main-head{
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+    background-color: rgb(236, 236, 236);
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    transition: 0.1s ease-in-out;
+}
+
+.main-head:hover{
+    box-shadow: 0 0 0 2px rgb(255, 255, 255); /* Simula uma borda */
+}
+
+.title-head{
+    font-family: "Outfit", serif;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff9100, #ff009d, #ff2eff, #ff9408);
+    text-transform: uppercase;
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    transition: 0.5s ease-in-out;
+    text-align: start;
+    -webkit-text-fill-color: transparent;
+    animation: title-head 10s infinite ease-in-out;
+}
+
+@keyframes title-head {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+
+ul a li {
+    color: #a3a1a1;
+    margin: 0 10px 0 10px;
+    transition: 0.3s ease-in-out;
+    font-family: "Outfit", serif;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+ul a li:hover {
+    color: #000;
+}
