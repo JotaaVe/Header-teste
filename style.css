@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 body{
-    background-color: rgb(189, 189, 189);
+    background-color: rgb(39, 39, 39);
     display: flex;
     justify-content: center;
-    
-}
-
-*{
-    color: white;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
     
 }
 
@@ -16,19 +15,72 @@ ul{
     display: flex;
 }
 
-.main-head{
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-container {
+    margin-top: 100px;
+    position: relative;
+    overflow: visible;  /* Esconde qualquer coisa que ultrapasse os limites */
+    border-radius: 12px; /* Garante que o efeito siga o formato arredondado */
+}
+
+.main-head {
     display: flex;
     justify-content: space-around;
     width: 450px;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(66, 66, 66);
     padding: 20px;
-    margin-top: 50px;
     border-radius: 10px;
-    transition: 0.1s ease-in-out;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
 }
 
-.main-head:hover{
-    box-shadow: 0 0 0 2px rgb(255, 255, 255); /* Simula uma borda */
+
+.card-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.5);
+    border-radius: inherit;
+    background: linear-gradient(90deg, #ff9100, #ff009d, #ff2eff, #ff9408);
+    z-index: -1;
+    filter: blur(8px);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    animation: border infinite 10s ease-in-out;
+}
+
+.head-container:hover .card-head {
+    transform: scale(1.02);
+    filter: blur(5px);
+    overflow: visible;
+}
+
+@keyframes border {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+@keyframes title-head {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
 }
 
 .title-head{
@@ -67,5 +119,6 @@ ul a {
 }
 
 ul a li:hover {
-    color: #000;
+    color: #ffffff;
 }
+
