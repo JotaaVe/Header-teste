@@ -51,32 +51,23 @@ header {
     height: 100%;
     transform: scale(0.5);
     border-radius: inherit;
-    background: linear-gradient(90deg, #ff9100, #ff009d, #ff2eff, #ff9408);
+    background: linear-gradient(90deg, #ff9100, #ff009d, #ff2eff, #ffea08, #ff9100);
+    background-size: 300% 300%;
     z-index: -1;
     filter: blur(8px);
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    animation: border infinite 10s ease-in-out;
 }
 
 .head-container:hover .card-head {
     transform: scale(1.02);
     filter: blur(5px);
     overflow: visible;
+    transition: 0.3s ease-in-out;
+    animation: borderAnimation infinite 15s ease-in-out;
 }
 
-@keyframes border {
+@keyframes borderAnimation {
     0% {
         background-position: 0%;
-    }
-
-    100% {
-        background-position: 400%;
-    }
-}
-
-@keyframes title-head {
-    0% {
-        background-position-x: 0%;
     }
 
     100% {
@@ -87,7 +78,7 @@ header {
 .title-head{
     font-family: "Outfit", serif;
     font-weight: 700;
-    background: linear-gradient(90deg, #ff9100, #ff009d, #ff2eff, #ff9408);
+    background: linear-gradient(90deg, #ff9100, #ff009d, #ff2eff, #ffd608, #ff9100);
     text-transform: uppercase;
     background-size: 400% 100%;
     -webkit-background-clip: text;
